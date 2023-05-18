@@ -1,0 +1,126 @@
+*{ /*en vez de body se puede poner "*" */
+    padding: 0;
+    margin: 0;
+}
+/*PROFE DISCULPE LA SENCILLEZ DE MI PAGINA, EL TP DE PROGRA 1 ME ESTA LLEVANDO
+MUCHO TIEMPO PORQUE MIS COMPAÑERO ESTAN MEDIOS PERDIDOS PARA HACERLO
+LA PROXIMA PAGINA LA HARE MEJOR. SALUDOS*/
+
+/*.body{
+    background-color: #399058;
+}*/
+.navBar{
+    background-color: rgb(255, 0, 187);
+    padding: 0 0 0 1em;
+}
+.logo{
+    font-size: 3em;
+    margin: 0;
+    font-family:'Bruno Ace SC', cursive;
+    margin: 0 0 0 .3em; /*el prof lo puso en 3*/
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right; /**te pone todo hacia la derecha**/
+}
+.opcionMenu{
+    padding: .1em .6em;
+    text-transform: uppercase; /*lowercase para poner en minus o upercase para mayus*/    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+}
+.opcionMenu:hover{ /*el hover para que cuando mouse pase por arriba se resalte la palabra*/
+    background-color: rgb(207, 108, 243);
+}
+.enlace:link, .enlace:visited, .enlace:active{
+    color: black;
+    text-decoration: none;
+}
+.cuerpoPrincipal{
+    width: 100%; /*con vw sirve igual que %*/
+    height: 100vb;
+    /*height: 100%;*/
+    display:grid;
+    text-align: center;
+    align-items: center;
+    background: url(templo-japones-degradado.avif);
+
+}
+.slogan{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    margin: 1em 3em;
+    text-align: center;
+    background-color: white transparent;
+    color: rgb(19, 182, 182);
+}
+/*****tienda*****/
+.grupoTarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.tarjeta{
+    width: 10em;
+    padding: 1.5em;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgb (180,180,180); /*sombra, primer valor es de x segundo de y, tercer disfuminado*/
+    transition: box-shadow .2s;
+    border-radius: 4px;
+}
+.tarjeta:hover{
+    box-shadow: 6px 6px 10px rgb(134,134, 134);
+}
+.foto{
+    width: 100%;
+    margin: 0 auto auto auto;
+}
+.genero, .articulo{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+}
+.articulo{
+    font-size: 1.2em;
+}
+.adicional1{
+    width: 100%;
+    text-align: center;
+    margin: .5em;
+    font-size: 1em;
+}
+.precio{
+    width: 100%;
+    text-align: right;
+    margin: 1em 0 0 0;
+    font-size: 2em;
+}
+.contactar{
+    width: 15%;
+    height: 90px;
+    margin: 3em;
+}
+.contacto{
+    width: 100%;
+    text-align:justify;
+    border-radius: 120px;
+    background: linear-gradient(145deg, #c7b6b6, #ecd8d8);
+    box-shadow:  9px 9px 24px #756b6b,
+             -9px -9px 24px #ffffff;
+}
+.noticia{
+    width: 25%; /*con vw sirve igual que %*/
+    height: 50vb;
+    display: flexbox ;
+    text-align: center;
+    align-items: center;
+    background: url(almohadon\ ds.jpg);
+    background-color: rgb(80, 237, 237);
+
+}
+
+
