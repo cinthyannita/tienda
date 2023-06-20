@@ -1,0 +1,335 @@
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.navBar{
+    background-color: rgb(254, 113, 216);
+    padding: .3em 2em;
+}
+.todo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 3em 0;
+}
+.logo{ /*yannia*/
+    font-family: 'yellowtail', cursive;
+    color: #000000;
+    font-size: 3.5em;
+    position: absolute;
+    top: 5px;
+    left: 35%;
+    
+}
+
+.menu{
+    display:flex;
+}
+.menuDesplegable {
+    /* Estilos del menú desplegable */
+    /* ... */
+    margin: auto;
+    position: relative;
+    top: -1.5em;
+    display: none; /* Ocultar el menú por defecto */
+  }
+  .menuDesplegable.activo {
+    display: block;
+  }
+  
+  
+#desplegar{
+    margin: auto;
+    position: relative;
+    top: -1.5em;
+}
+#contraer{
+    position: relative;
+    top: -1.5em;
+    margin: auto;
+    display: none;
+}
+#contraer:hover,#desplegar:hover{
+    transition: .2s;
+}
+
+.opcionMenu2{
+    font-family: "montserrat", sans-serif;
+    width: 5em;
+    font-weight: 600;
+    color:blueviolet;
+    padding: 0 0 .1em -.9em;
+    transition: .2s;
+    font-size: 1.6em;
+    overflow: auto;
+    
+}
+.opcionMenu2 :hover{
+    color: black;
+    background-color: #f9c20077;
+    padding: 0 .2em;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+#desplegable{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 80px;
+    margin: auto;
+    position: relative;
+    top: -6em;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.enlace:link, .enlace:visited, .enlace:active{
+    color: black;
+    text-decoration: none;
+}/* hasta aca*/
+.cuerpoPrincipal{
+    width: 100%; 
+    min-height: 61vh;
+    display:grid;
+    background: url(fondo.jpg);
+
+}
+.slogan{ /*la moda a tus pies*/
+    font-family:cursive;
+    font-size: 2em;
+    background-color: white transparent;
+    color: rgb(19, 182, 182);
+    top: 10px;
+    text-align: center;
+    align-items: center;
+}
+.icono{
+    background-color: #e35555;
+    border-radius: 5px;
+    margin: .7em .3em;
+    padding: .6em .7em;
+    height: 2.5em;
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:center;
+    margin-right: 1em;
+}
+.redes iconify-icon{
+    margin-right: .5em;
+}
+.whatsapp{
+    width: 13em;
+    margin-left: 1.5em;
+}
+#celular{
+    color: #00f97c;
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-left: .3em;
+}
+#reservas{
+    color: black;
+    font-family: "montserrat", sans-serif;
+    font-weight: 600;
+}
+#reservas:active,#reservas:visited, #reservas:link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.footer{
+    background-color: rgb(28, 242, 235);
+    margin-top: auto;
+    padding: .1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footerIzq{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+.footerDer{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+.textoFooter{
+    font-family: "montserrat", sans-serif;
+    font-weight: 600;
+    color: #000000;
+    margin: .1em 0;
+}
+/*****************Slider****************/
+
+.container-slider{
+    width: 30%;
+    max-width: 280px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 5px 8px #dd623c;
+}
+.slider{
+    display: flex;
+    width: 500%;
+    height: 350px;
+    margin-left: -100%;
+    overflow: hidden;
+}
+.slider__section{
+    width: 50%;
+
+}
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider__btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,.7);
+    top: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider__btn:hover{
+    background: #fff;
+}
+.slider__btn-left{
+    left: 10px;
+}
+.slider__btn-right{
+    right: 30px;
+}
+/*************Responsive***********/
+@media only screen and (max-width: 1200px){
+    body{
+        font-size: 12px;
+    }
+    .slogan{
+        font-size: 2em;
+    }
+}
+@media only screen and (max-width: 900px){
+    body{
+        font-size: 10px;
+    }
+    .logo{
+        font-size: 3.2em;
+    }
+}
+@media only screen and (max-width: 590px){
+    .logo{
+        font-size: 3em;
+    }
+}
+@media only screen and (max-width: 400px){
+    .logo{
+        left: 33%;
+        top: 3.3%;
+        font-size: 2.5em;
+    }
+    .slogan{
+        font-size: 1.5em;
+        top: 5px;
+    }
+    
+}
+
+/*****tienda*****/
+.grupoTarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+.tarjeta{
+    width: 15em;
+    height: 19em;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgb (180,180,180); /*sombra, primer valor es de x segundo de y, tercer disfuminado*/
+    transition: box-shadow .2s;
+    border-radius: 4px;
+    margin: 0.5em;
+}
+.tarjeta:hover{
+    box-shadow: 6px 6px 10px rgb(134,134, 134);
+}
+.foto{
+    width: 65%;
+    margin: 0 auto auto auto;
+}
+.articulo{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+}
+.articulo{
+    font-size: 1.2em;
+}
+.adicional1{
+    width: 100%;
+    text-align: center;
+    margin: .5em;
+    font-size: 1em;
+}
+.precio{
+    width: 100%;
+    text-align: center;
+    margin: .1em 0 0 0;
+    font-size: 1.4em;
+}
+.contactar{
+    width: 15%;
+    height: 90px;
+    margin: 3em;
+}
+.contacto{
+    width: 100%;
+    text-align:justify;
+    border-radius: 120px;
+    background: linear-gradient(145deg, #c7b6b6, #ecd8d8);
+    box-shadow:  9px 9px 24px #756b6b,
+             -9px -9px 24px #ffffff;
+}
+.noticia{
+    width: 25%; /*con vw sirve igual que %*/
+    height: 50vb;
+    display: flexbox ;
+    text-align: center;
+    align-items: center;
+    background: url(almohadon\ ds.jpg);
+    background-color: rgb(80, 237, 237);
+
+}
+
+
